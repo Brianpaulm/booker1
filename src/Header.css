@@ -1,0 +1,47 @@
+/* Main container for the header */
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Center items vertically */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick the header to the top */
+    background-color: white; /* Background color of the header */
+    z-index: 100; /* Ensure the header stays on top */
+    width: 100%; /* Full width of the header */
+}
+
+/* Styling for the header icon (logo) */
+.header__icon {
+    object-fit: contain; /* Maintain aspect ratio */
+    height: 100px; /* Set the height */
+    margin-left: 20px; /* Space on the left */
+}
+
+/* Center part of the header (search bar container) */
+.header__center {
+    display: flex; /* Use flexbox for layout */
+    flex: 1; /* Grow to fill available space */
+    align-items: center; /* Center items vertically */
+    max-width: fit-content; /* Max width adjusts to content */
+    padding: 10px; /* Padding around the container */
+    height: 30px; /* Height of the search bar */
+    border: 1px solid lightgray; /* Border styling */
+    border-radius: 999px; /* Rounded corners */
+}
+
+/* Styling for the input field inside the center part */
+.header__center > input {
+    border: none; /* No border for the input */
+    padding: 10px; /* Padding inside the input */
+    outline-width: 0; /* No outline */
+    width: 250px; /* Width of the input */
+}
+
+/* Right part of the header (buttons and avatar) */
+.header__right {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items evenly */
+    width: 15vw; /* Width of the right section */
+    margin-right: 80px; /* Space on the right */
+}
