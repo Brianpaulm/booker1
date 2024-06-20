@@ -1,11 +1,28 @@
-import React from 'react'; // Importing React to use JSX
+import React,{useState} from 'react'; // Importing React to use JSX
 import './Banner.css'; // Importing the CSS file for styling the Banner component
-
+import { Button } from '@mui/material';
+import Search from './Search';
+import { useHistory} from "react-router-dom"
 // Banner component definition
 function Banner() {
+  const history=useHistory();
+    const [showSearch,setShowSearch]=useState(false);
     return (
         <div className='banner'> {/* Main container for the banner */}
-            <h1>Banner</h1> {/* Header text for the banner */}
+         <div className='banner__search'>
+          {showSearch && <Search/>} 
+        <Button onClick={()=> setShowSearch(!showSearch)}
+         className='banner__searchButton'
+         variant='outlined'>
+          {showSearch?"Hide":"Select Dates"}
+
+        </Button>
+        </div>
+            <div className='banner__info'>
+             <h1></h1>
+             <h5></h5>
+             <Button onClick={()=>history.push('/search') } variant='outlined'>Explore More</Button>
+           </div>
         </div>
     );
 }

@@ -22,7 +22,8 @@
     display: flex; /* Use flexbox for layout */
     flex: 1; /* Grow to fill available space */
     align-items: center; /* Center items vertically */
-    max-width: fit-content; /* Max width adjusts to content */
+    max-width: -moz-fit-content; /* Max width adjusts to content for Firefox */
+    max-width: fit-content; /* Max width adjusts to content for other browsers */
     padding: 10px; /* Padding around the container */
     height: 30px; /* Height of the search bar */
     border: 1px solid lightgray; /* Border styling */
