@@ -1,20 +1,21 @@
 import React from 'react';
 import './Header.css'; // Importing the CSS file for styling the Header component
-import SearchIcon from '@material-ui/icons/Search'; // Importing the Search icon from Material-UI icons
-import LanguageIcon from '@material-ui/icons/Language'; // Importing the Language icon from Material-UI icons
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'; // Importing the ExpandMore icon from Material-UI icons
-import { Avatar, } from '@material-ui/core'; // Importing the Avatar component from Material-UI core
-import {Link} from "react-router-dom";
+import SearchIcon from '@mui/icons-material/Search'; // Importing the Search icon from Material-UI icons
+import LanguageIcon from '@mui/icons-material/Language'; // Importing the Language icon from Material-UI icons
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Importing the ExpandMore icon from Material-UI icons
+import { Avatar } from '@mui/material'; // Importing the Avatar component from Material-UI core
+import { Link } from "react-router-dom";
+
 // Header component definition
 function Header() {
     return (
         <div className='header'> {/* Main container for the header */}
-            <Link to ='/'>
-            <img
-                className='header__icon' // Class for styling the header icon
-                src='https://via.placeholder.com/150' // Placeholder image URL for the logo
-                alt='Logo' // Alternative text for the image
-            />
+            <Link to='/'>
+                <img
+                    className='header__icon' // Class for styling the header icon
+                    src='https://via.placeholder.com/150' // Placeholder image URL for the logo
+                    alt='Logo' // Alternative text for the image
+                />
             </Link>
             <div className='header__center'> {/* Container for the search bar */}
                 <input type='text' /> {/* Input field for search */}
